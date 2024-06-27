@@ -80,7 +80,13 @@ eachSecond(5, 15);
 // Task 5
 
 const degree = (x, n) => {
-  console.log(x ** n);
+    let result = x;
+
+    for (let i = 1; i < n; i++) {
+        result *= x;
+    }
+    return result;
 }
 
-degree(2, 5); // 32
+const result = degree(2, 5);
+console.log(result); // 32
